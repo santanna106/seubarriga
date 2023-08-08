@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  db:
+    image: postgres:11
+    restart: always
+    container_name: seubarriga_db
+    environment:
+      - POSTGRES_DB=seubarriga_db
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=123456
+    ports:
+      - 5432:5432
+
+  
