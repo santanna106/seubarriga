@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:14-alpine
 
 WORKDIR /usr/app
 
@@ -8,7 +8,7 @@ RUN yarn install
 
 COPY . . 
 
-EXPOSE 8080
+EXPOSE 3000
 
 
 CMD ["yarn", "dev"]

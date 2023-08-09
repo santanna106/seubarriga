@@ -11,4 +11,16 @@ services:
     ports:
       - 5432:5432
 
+  node-ts-optimized:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: example-web-server
+    volumes:
+      - ./src:/app/src
+    ports:
+      - "8080:3001"
+      - "8181:8181"
+    command: yarn dev
+
   
